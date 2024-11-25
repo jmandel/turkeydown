@@ -6,7 +6,7 @@ import { Element } from "domhandler";
 import * as DomUtils from "domutils";
 
 // Types
-type ResolveType = 'llm' | 'fetch' | 'passthrough';
+type ResolveType = 'llm' | 'fetch' | 'passthrough' | 'map';
 
 interface Section {
   title: string;
@@ -80,9 +80,10 @@ class MarkdownParser {
             ...currentSection.dependencies,
             ...matches.map(m => m.replace(/[{}]/g, '').trim())
           ];
-          currentSection.template = {
-            variables: [...currentSection.template.variables, ...matches]
-          };
+          if (!currentSection.template) {
+            currentSection.template = { variables: [] };
+          }
+          currentSection.template.variables = [...currentSection.template.variables, ...matches];
         }
         
         currentSection.content += line + '\n';
@@ -113,6 +114,13 @@ class MarkdownParser {
 // Resolver
 class Resolver {
   private readonly urlPattern = /^https?:\/\/.+/;
+  private parser: typeof MarkdownParser;
+  private originalSections: Section[];
+  
+  constructor(markdown: string) {
+    this.parser = MarkdownParser;
+    this.originalSections = MarkdownParser.parse(markdown);
+  }
   
   private async extractRecipeData(html: string): Promise<string> {
     let output = '';
@@ -149,7 +157,7 @@ class Resolver {
     
     proc.stdin.write(new TextEncoder().encode(html));
     proc.stdin.flush();
-    proc.stdin.close();
+    proc.stdin.end();
     
     const textData = await new Response(proc.stdout).text();
     await proc.exited;
@@ -196,7 +204,7 @@ class Resolver {
     // Write to stdin and close it
     proc.stdin.write(new TextEncoder().encode(formattedPrompt));
     proc.stdin.flush();
-    proc.stdin.close();
+    proc.stdin.end();
 
     const text = await new Response(proc.stdout).text();
     await proc.exited;
@@ -208,10 +216,67 @@ class Resolver {
     return text;
   }
   
+  private async resolveMapSection(section: Section, resolvedSections: Map<string, string>): Promise<string> {
+    // Find the template variable with #map suffix
+    const mapVar = section.template?.variables.find(v => v.includes('#map'));
+    if (!mapVar) {
+      throw new Error(`Map section ${section.title} requires a template variable with #map suffix`);
+    }
+
+    // Extract the section name before #map
+    const targetSectionName = mapVar.replace(/[{}]/g, '').split('#')[0].trim();
+    
+    // Find the target section in the ORIGINAL section tree
+    const findSection = (sections: Section[]): Section | undefined => {
+      for (const s of sections) {
+        if (s.title === targetSectionName) return s;
+        const found = findSection(s.children);
+        if (found) return found;
+      }
+      return undefined;
+    };
+
+    const targetSection = findSection(this.originalSections);
+
+    if (!targetSection) {
+      throw new Error(`Could not find section ${targetSectionName} for mapping`);
+    }
+
+    // Process the template once for each child of the target section
+    const results = await Promise.all(targetSection.children.map(async childSection => {
+      let content = await MarkdownParser.getSectionContent(section, resolvedSections);
+      
+      // Replace the #map variable with the child's content
+      const childContent = resolvedSections.get(childSection.title) || '';
+      content = content.replace(mapVar, childContent);
+      
+      // Replace any other template variables
+      if (section.template?.variables) {
+        for (const variable of section.template.variables) {
+          if (variable === mapVar) continue; // Skip the map variable
+          const cleanVar = variable.replace(/[{}]/g, '').trim();
+          const replacement = resolvedSections.get(cleanVar) || '';
+          content = content.replace(variable, replacement);
+        }
+      }
+
+      return await this.resolveLLM(content);
+    }));
+
+    // Combine all results
+    return results.join('\n\n');
+  }
+
   async resolveSection(section: Section, resolvedSections: Map<string, string>): Promise<string> {
     let content = await MarkdownParser.getSectionContent(section, resolvedSections);
     
-    // Replace template variables
+    // Check if any template variable contains #foreach
+    const foreachVar = section.template?.variables.find(v => v.includes('#foreach'));
+    if (foreachVar) {
+      return this.resolveForeachSection(section, foreachVar, resolvedSections);
+    }
+    
+    // Regular template variable replacement for non-foreach sections
     if (section.template?.variables) {
       for (const variable of section.template.variables) {
         const cleanVar = variable.replace(/[{}]/g, '').trim();
@@ -237,18 +302,66 @@ class Resolver {
         return content;
     }
   }
+
+  private async resolveForeachSection(
+    section: Section, 
+    foreachVar: string, 
+    resolvedSections: Map<string, string>
+  ): Promise<string> {
+    // Extract the section name before #foreach
+    const targetSectionName = foreachVar.replace(/[{}]/g, '').split('#')[0].trim();
+    
+    // Find the target section in the original section tree
+    const findSection = (sections: Section[]): Section | undefined => {
+      for (const s of sections) {
+        if (s.title === targetSectionName) return s;
+        const found = findSection(s.children);
+        if (found) return found;
+      }
+      return undefined;
+    };
+
+    const targetSection = findSection(this.originalSections);
+
+    if (!targetSection) {
+      throw new Error(`Could not find section ${targetSectionName} for foreach operation`);
+    }
+
+    // Process the template once for each child of the target section
+    const results = await Promise.all(targetSection.children.map(async childSection => {
+      let content = await MarkdownParser.getSectionContent(section, resolvedSections);
+      
+      // Replace the #foreach variable with the child's content
+      const childContent = resolvedSections.get(childSection.title) || '';
+      content = content.replace(foreachVar, childContent);
+      
+      // Replace any other template variables
+      if (section.template?.variables) {
+        for (const variable of section.template.variables) {
+          if (variable === foreachVar) continue; // Skip the foreach variable
+          const cleanVar = variable.replace(/[{}]/g, '').trim();
+          const replacement = resolvedSections.get(cleanVar) || '';
+          content = content.replace(variable, replacement);
+        }
+      }
+
+      return await this.resolveLLM(content);
+    }));
+
+    // Combine all results
+    return results.join('\n\n');
+  }
 }
 
 // Processor
 class MarkdownProcessor {
   private parser: typeof MarkdownParser;
-  private resolver: Resolver;
+  private resolver!: Resolver;  // Use definite assignment assertion
   private debugDir: string;
   private outputDir: string;
   
   constructor(inputFile: string) {
     this.parser = MarkdownParser;
-    this.resolver = new Resolver();
     
     const baseDir = basename(inputFile, ".md");
     this.debugDir = join("output", baseDir, "debug");
@@ -272,6 +385,9 @@ class MarkdownProcessor {
   }
   
   async process(markdown: string): Promise<Map<string, string>> {
+    // Initialize resolver with the markdown content
+    this.resolver = new Resolver(markdown);
+    
     const sections = this.parser.parse(markdown);
     console.log("Parsed sections:", JSON.stringify(sections, null, 2));
 

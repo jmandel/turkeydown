@@ -1,0 +1,23 @@
+{
+  "section": {
+    "title": "Prep Plan",
+    "content": "\nHere is a series of recipes we are going to make for Thanksgiving:\n{{Formatted Recipes}}\n\nNow we'll create a prep schedule starting Sunday night through mealtime Thursday, emphasizing make-ahead where it improves or doesn't detract from quality -- while also consolidating prep steps smartly.\n\nNow output a table where the rows are days (Sunday night, Monday, Tuesday, Wednesday, Thursday), and include a separate column for each of the following dishes: {{Dishes to Prepare}}. This way we can see what prep steps should happen at which cell (time x dish).\n\nNotes:\n  * Focus Sunday on Turkey prep only.\n  * Baked goods should be baked fresh on Thanksgiving unless they strictly benefit form make-ahead.\n",
+    "resolveType": "llm",
+    "dependencies": [
+      "Formatted Recipes",
+      "Dishes to Prepare"
+    ],
+    "template": {
+      "variables": [
+        "{{Formatted Recipes}}",
+        "{{Dishes to Prepare}}"
+      ]
+    },
+    "level": 2,
+    "children": []
+  },
+  "resolvedDependencies": {
+    "Dishes to Prepare": "Wild rice soup, Broccoli Rabe",
+    "Formatted Recipes": "Here's the recipe converted to the requested markdown format:\n\n# Pressure Cooker Mushroom and Wild Rice Soup\n\n## Ingredients\n- 4 tablespoons unsalted butter (1/2 stick)\n- 1 yellow or red onion, minced\n- 2 pounds mixed mushrooms (such as cremini and shiitake), tough stems removed, mushrooms chopped into 1/2- to 1-inch pieces\n- Kosher salt and black pepper\n- 2 celery stalks, chopped\n- 1 large carrot, peeled and chopped\n- 6 garlic cloves, smashed and chopped\n- 3 sprigs fresh thyme or 1 teaspoon dried thyme\n- 1 teaspoon garlic powder\n- 1/4 cup all-purpose flour\n- 5 cups vegetable or chicken stock\n- 1/2 cup dry white wine\n- 1 cup wild rice (about 6 ounces)\n- 1/2 cup sour cream\n- Chopped scallions or chives and fresh dill, for topping\n\n## Steps\n1. Turn on the sauté setting on a 6- to 8-quart electric pressure cooker. Melt the butter, then add the onion. Cook, stirring occasionally, until translucent, about 5 minutes.\n\n2. Add the mushrooms and 1 teaspoon salt, and cook, stirring occasionally, until the mushrooms have released their liquid and shrunk a bit, about 8 minutes. Add the celery, carrot, chopped garlic, thyme, garlic powder and several generous grinds of black pepper. Stir to combine. Add the flour and stir until the vegetables are evenly coated and no white spots remain.\n\n3. Pour in the stock and wine, and turn off the heat. Scrape the bottom of the pot very well to incorporate flour and any browned bits that are stuck to the bottom. Stir in the wild rice.\n\n4. Cook on high pressure for 10 to 12 minutes. Turn off the heat and let the pressure reduce naturally for 10 minutes, then release the remaining pressure manually.\n\n5. Stir the soup and check the texture of the wild rice; if it needs a bit more time repeat the pressure cooking process for a cook time of 2 minutes and rapidly release the pressure. Check the texture of the soup; if you'd like it to be thicker, turn on the sauté function and let the soup simmer to reduce to desired consistency. Turn off the heat.\n\n6. Put the sour cream in a small bowl and slowly whisk in a few spoonfuls of warm soup until smooth, then stir the mixture into the soup. (This prevents the sour cream from separating.) Taste the soup and add salt and pepper to taste.\n\n7. Serve the soup in bowls topped with chopped scallions or chives and dill. Reheat any leftovers on low until warm. (Boiling can cause the sour cream to break.)\n\n\n# Sautéed Broccoli Rabe with Garlic\n\n## Ingredients\n- 1 bunch broccoli rabe (rapini), trimmed\n- 3-4 cloves garlic, thinly sliced\n- 2-3 tablespoons olive oil\n- 1/4-1/2 teaspoon red pepper flakes\n- Salt and black pepper to taste\n\n## Steps\n1. Trim tough ends from broccoli rabe and wash thoroughly.\n\n2. Bring a large pot of salted water to boil. Blanch broccoli rabe for 1-2 minutes, then drain and plunge into ice water. Drain well and pat dry.\n\n3. Heat olive oil in a large skillet over medium heat. Add sliced garlic and red pepper flakes, sauté until garlic is light golden (1-2 minutes).\n\n4. Add broccoli rabe to the pan. Season with salt and black pepper, then sauté for 3-5 minutes until tender but still crisp.\n\n5. Serve hot as a side dish. Optionally finish with a squeeze of lemon juice or a drizzle of extra virgin olive oil.\n"
+  }
+}

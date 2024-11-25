@@ -1,0 +1,14 @@
+{
+  "section": {
+    "title": "Broccoli Rabe",
+    "content": "Simple sautéed broccoli rabe with garlic and a touch of red pepper flakes.\n\n",
+    "resolveType": "llm",
+    "dependencies": [],
+    "template": {
+      "variables": []
+    },
+    "level": 3,
+    "children": []
+  },
+  "resolvedDependencies": {}
+}

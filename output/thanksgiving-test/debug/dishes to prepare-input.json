@@ -1,0 +1,14 @@
+{
+  "section": {
+    "title": "Dishes to Prepare",
+    "content": "Wild rice soup, Broccoli Rabe\n\n",
+    "resolveType": "passthrough",
+    "dependencies": [],
+    "template": {
+      "variables": []
+    },
+    "level": 2,
+    "children": []
+  },
+  "resolvedDependencies": {}
+}

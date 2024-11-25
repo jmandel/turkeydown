@@ -1,0 +1,18 @@
+{
+  "section": {
+    "title": "Formatted Recipes",
+    "content": "\nHere is a recipe for reference:\n{{Recipes#foreach}}\n\nConvert this into a simple structured markdown with title (#), ingredients (##), and steps (##). Example:\n\n    # Peanut Butter Cookies\n\n    ## Ingredients\n    - 1 cup peanut butter\n    - 1 cup sugar\n    - 1 large egg\n\n    ## Steps\n    1. Preheat oven to 350°F. Mix all ingredients in a bowl until smooth.\n    2. Roll dough into 1-inch balls and place on baking sheet. Press down with a fork to make criss-cross pattern.\n    3. Bake for 10 minutes until edges are lightly golden.\n\n",
+    "resolveType": "llm",
+    "dependencies": [
+      "Recipes#foreach"
+    ],
+    "template": {
+      "variables": [
+        "{{Recipes#foreach}}"
+      ]
+    },
+    "level": 2,
+    "children": []
+  },
+  "resolvedDependencies": {}
+}

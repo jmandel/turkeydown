@@ -1,0 +1,14 @@
+{
+  "section": {
+    "title": "Wild Rice Soup",
+    "content": "https://cooking.nytimes.com/recipes/1021942-pressure-cooker-mushroom-and-wild-rice-soup\n\n",
+    "resolveType": "fetch",
+    "dependencies": [],
+    "template": {
+      "variables": []
+    },
+    "level": 3,
+    "children": []
+  },
+  "resolvedDependencies": {}
+}

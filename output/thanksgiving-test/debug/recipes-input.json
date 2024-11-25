@@ -1,0 +1,37 @@
+{
+  "section": {
+    "title": "Recipes",
+    "content": "\n",
+    "resolveType": "passthrough",
+    "dependencies": [],
+    "template": {
+      "variables": []
+    },
+    "level": 2,
+    "children": [
+      {
+        "title": "Wild Rice Soup",
+        "content": "https://cooking.nytimes.com/recipes/1021942-pressure-cooker-mushroom-and-wild-rice-soup\n\n",
+        "resolveType": "fetch",
+        "dependencies": [],
+        "template": {
+          "variables": []
+        },
+        "level": 3,
+        "children": []
+      },
+      {
+        "title": "Broccoli Rabe",
+        "content": "Simple sautéed broccoli rabe with garlic and a touch of red pepper flakes.\n\n",
+        "resolveType": "llm",
+        "dependencies": [],
+        "template": {
+          "variables": []
+        },
+        "level": 3,
+        "children": []
+      }
+    ]
+  },
+  "resolvedDependencies": {}
+}
