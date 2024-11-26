@@ -15,193 +15,210 @@ Wild Rice Soup, Green Beans, Broccoli Rabe, Cranberry Sauce, Turkey, Herbed Grav
 
 ## Formatted Recipes
 
-Here are the consolidated recipes in markdown format:
-
 # Pressure Cooker Mushroom and Wild Rice Soup
 
-**Ingredients:**
+## Ingredients
 - 4 tbsp unsalted butter 
 - 1 yellow onion, minced
-- 2 lbs mixed mushrooms (cremini/shiitake), chopped into 1/2-1 inch pieces
+- 2 lbs mixed mushrooms (cremini/shiitake), chopped
 - 2 celery stalks, chopped
 - 1 large carrot, peeled and chopped
 - 6 garlic cloves, smashed and chopped
 - 3 sprigs fresh thyme or 1 tsp dried
 - 1 tsp garlic powder
 - 1/4 cup all-purpose flour
-- 5 cups vegetable or chicken stock
+- 5 cups vegetable/chicken stock
 - 1/2 cup dry white wine
-- 1 cup wild rice (6 oz)
+- 1 cup wild rice
 - 1/2 cup sour cream
 - Salt and pepper to taste
-- Chopped scallions/chives and dill for garnish
+- Chopped scallions/chives/dill for garnish
 
-**Instructions:**
+## Instructions
 1. Using sauté function, melt butter and cook onion until translucent (5 min)
-2. Add mushrooms and salt, cook until mushrooms release liquid (8 min) 
-3. Add celery, carrot, garlic, thyme, garlic powder and pepper. Add flour and stir until vegetables coated.
-4. Add stock and wine, scrape bottom. Stir in rice.
-5. Pressure cook on high 10-12 minutes. Natural release 10 minutes.
-6. Stir in sour cream. Season to taste.
-7. Serve garnished with herbs.
+2. Add mushrooms and salt, cook until reduced (8 min)
+3. Add celery, carrot, garlic, thyme, garlic powder, pepper 
+4. Add flour and stir to coat evenly
+5. Add stock and wine, scrape bottom well
+6. Add wild rice
+7. Pressure cook 10-12 min, natural release 10 min
+8. Open and check rice texture - cook additional 2 min if needed
+9. Reduce if too thin
+10. Temper sour cream with hot soup before stirring in
+11. Season to taste and garnish to serve
 
 ---
 
 # Green Beans with Ginger and Garlic
 
-**Ingredients:**
-- 2 1/2 lbs green beans, trimmed 
+## Ingredients
+- 2 1/2 lbs green beans, trimmed
 - 4 tbsp vegetable oil
-- 1/4 cup minced fresh ginger (from 6 inches peeled root)
+- 1/4 cup minced fresh ginger (6 inches peeled root)
 - 4 medium garlic cloves, minced
 - Salt to taste
 
-**Instructions:**
-1. Boil salted water and prepare ice bath. Blanch beans until crisp-tender, 4 minutes.
-2. Shock in ice water, drain and dry.
-3. Heat 2 tbsp oil in skillet over high heat.
-4. Cook half the beans with half ginger/garlic until heated through.
-5. Season and remove. Repeat with remaining ingredients.
+## Instructions
+1. Bring large pot of salted water to boil
+2. Blanch beans in batches until crisp-tender and bright green (4 min)
+3. Shock in ice water, drain and dry
+4. Heat 2 tbsp oil in skillet over high heat
+5. Add half the beans, ginger, garlic
+6. Cook stirring until heated through and aromatic
+7. Season with salt and transfer to serving dish
+8. Repeat with remaining ingredients
 
 ---
 
-# Sautéed Broccoli Rabe with Garlic
+# Sautéed Broccoli Rabe
 
-**Ingredients:**
+## Ingredients
 - 1 bunch broccoli rabe, trimmed
-- 4-5 garlic cloves, sliced thin
-- 2-3 tbsp olive oil  
+- 4-5 garlic cloves, sliced
+- 2-3 tbsp olive oil 
 - 1/4-1/2 tsp red pepper flakes
-- Salt and black pepper to taste
+- Salt and black pepper
+- Lemon juice (optional)
 
-**Instructions:**
-1. Trim rabe and cut into 2-inch pieces
-2. Blanch in salted water 1-2 minutes, shock in ice water, drain well
-3. Heat oil in skillet over medium heat
-4. Sauté garlic and pepper flakes until golden
-5. Add rabe, season with salt/pepper
-6. Cook 3-5 minutes until heated through and tender-crisp
+## Instructions
+1. Trim tough stems and cut into 2-inch pieces
+2. Blanch in salted water 1-2 minutes
+3. Shock in ice water, drain well
+4. Heat oil over medium heat
+5. Sauté garlic and pepper flakes until golden
+6. Add broccoli rabe, cook 3-5 minutes until tender-crisp
+7. Season with salt, pepper, optional lemon juice
 
 ---
 
-# Classic Cranberry Sauce
+# Cranberry Sauce 
 
-**Ingredients:**
-- 12 oz fresh or frozen cranberries
+## Ingredients
+- 12 oz fresh/frozen cranberries
 - 3/4 cup sugar
-- 3/4 cup orange juice, fresh squeezed preferred
+- 3/4 cup orange juice
 - Zest of 1 orange
 
-**Instructions:**
-1. Combine cranberries, sugar, and juice in saucepan over medium-high heat
-2. Cook until sugar dissolves and berries begin bursting, 4-6 minutes
+## Instructions
+1. Combine cranberries, sugar, orange juice in saucepan
+2. Cook over medium-high until sugar dissolves and berries burst (4-6 min)
 3. Add zest, cook 2-3 minutes more
-4. Cool, cover and refrigerate until cold (2+ hours)
+4. Cover and cool
+5. Refrigerate until cold (2+ hours)
 
 ---
 
-# Butterflied Dry-Brined Turkey 
+# Butterflied Dry-Brined Turkey
 
-**Ingredients:**
-For the brine:
+## Ingredients
 - 3 1/2 tbsp kosher salt
 - 1 1/2 tsp rubbed sage
-- 1 1/2 tsp dried thyme
+- 1 1/2 tsp dried thyme 
 - 1 1/4 tsp black peppercorns
 - 1/2 tsp allspice berries
 - 13-14 lb whole turkey
+- Oil for basting
 
-**Instructions:**
+## Instructions
 1. Grind salt and spices together
-2. Remove backbone from turkey, flatten
-3. Rub seasoning all over turkey
-4. Refrigerate uncovered 4 days
-5. Roast at 425°F for 30 min
-6. Reduce to 350°F, cook until breast reaches 155°F (40-50 min)
-7. Rest 30 minutes before carving
+2. Remove backbone from turkey
+3. Flatten by pressing on breastbone
+4. Rub spice mixture all over
+5. Refrigerate uncovered 4 days
+6. Bring to room temp 1 hour before cooking
+7. Roast at 425°F for 30 min
+8. Reduce to 350°F, cook 40-50 min more to 155°F internal
+9. Rest 30 minutes before carving
 
 ---
 
-# Classic Turkey Gravy with Fresh Herbs
+# Classic Turkey Gravy
 
-**Ingredients:**
+## Ingredients 
 - Pan drippings from turkey
 - 4 cups turkey/chicken stock
-- 1/2 cup flour 
-- 1/2 cup butter or turkey fat
+- 1/2 cup flour
+- 4 tbsp butter
 - 2 tbsp fresh thyme
-- 2 tbsp fresh sage, chopped
-- 1 tbsp fresh rosemary, chopped
-- Salt and pepper to taste
+- 2 tbsp fresh sage
+- 1 tbsp fresh rosemary
+- Salt and pepper
 
-**Instructions:**
-1. Separate fat from drippings
-2. Make roux with 1/2 cup fat and flour
-3. Whisk in drippings and stock
-4. Add herbs, simmer until thickened (10-15 min)
-5. Season and strain if desired
+## Instructions
+1. Remove turkey from roasting pan
+2. Heat pan on stovetop, scrape up browned bits
+3. Make roux with butter and flour
+4. Gradually whisk in stock until smooth
+5. Simmer until thickened (5-10 min)
+6. Add herbs, season to taste
+7. Strain if desired
+8. Serve hot
 
 ---
 
-# Roasted Root Vegetable Panzanella
+# Root Vegetable Panzanella
 
-**Ingredients:** 
-- 1 1/2 lbs parsnips, 1/2-inch cubes
-- 1 tsp vegetable oil
+## Ingredients
+- 1 1/2 lbs parsnips, 1⁄2 inch pieces  
+- 1 lb rutabaga, 1⁄2 inch pieces
 - 1/2 lb red onion, diced
 - 8 oz Brussels sprouts, shredded
-- 8 oz sourdough bread, 1/2-inch cubes
+- 8 oz sourdough bread cubes
 - 2 garlic cloves, minced
 - 1/4 cup apple cider vinegar
 - 2 tsp fresh thyme
-- Salt and pepper to taste
+- Vegetable oil
+- Salt and pepper
 
-**Instructions:**
-1. Toss parsnips with oil, roast at 425°F (30 min)
-2. Add onion, continue roasting
-3. Add sprouts, bread, garlic, roast 15 min more
-4. Toss with vinegar, thyme, season to taste
-5. Serve warm or room temp
+## Instructions
+1. Toss parsnips/rutabaga with oil
+2. Roast at 425°F for 30 min
+3. Add onion, roast until tender
+4. Add Brussels sprouts, bread, garlic
+5. Roast 15 minutes more
+6. Toss with vinegar, thyme, seasonings
+7. Serve warm or room temp
 
 ---
 
-# Delicata Squash and Sage Biscuits
+# Delicata Squash Sage Biscuits
 
-**Ingredients:**
-- 1 medium delicata squash
-- 2 cups AP flour 
-- 2 1/2 tsp baking powder
-- 1/2 tsp baking soda
+## Ingredients
+- 1 medium delicata squash 
+- 2 cups flour
+- 2 1⁄2 tsp baking powder
+- 1⁄2 tsp baking soda
 - 2 tbsp sugar
 - 1 tsp salt
 - 6 tbsp cold butter
-- 1 1/2 tsp chopped sage plus leaves for garnish
-- 3/4 cup heavy cream
+- Fresh sage (1 1⁄2 tsp chopped + whole leaves)
+- 3/4 cup cream
 - 1 egg + 1 tbsp milk for wash
 
-**Instructions:**
-1. Roast squash until tender, puree 1/2 cup
-2. Mix dry ingredients, grate in cold butter
-3. Combine squash puree with cream and chopped sage
-4. Mix wet into dry until just combined
-5. Pat out, cut biscuits, brush with egg wash
-6. Top with sage leaves
-7. Bake 400°F 12-15 minutes
+## Instructions
+1. Roast squash until tender, puree 1⁄2 cup
+2. Whisk dry ingredients
+3. Cut in butter until crumbly
+4. Mix in squash puree, cream, chopped sage
+5. Pat to 3/4 inch thick
+6. Cut rounds, top with sage leaf and egg wash
+7. Bake 400°F 12-15 min
 
 ---
 
 # Tahini Apple Tart
 
-**Ingredients:**
-For the dough:
-- 1 1/2 cups AP flour
-- 1 tbsp sugar
-- 1 1/4 tsp salt
-- 3/4 cup cold butter
-- Ice water as needed
+## Ingredients
 
-For the filling:
-- 1/3 cup tahini 
+### Crust
+- 1 1⁄2 cups flour
+- 1 tbsp sugar
+- 1 1⁄4 tsp salt
+- 3/4 cup cold butter
+- Ice water
+
+### Filling
+- 1/3 cup tahini
 - 3 tbsp sugar
 - 3 tbsp butter
 - 1 egg
@@ -211,130 +228,206 @@ For the filling:
 - Heavy cream for brushing
 - Sesame seeds
 
-**Instructions:**
-1. Make dough, chill 2 hours
-2. Mix tahini filling
-3. Roll dough, add filling leaving border
-4. Arrange apples, fold edges
-5. Brush with cream, top with seeds
-6. Bake 375°F 40-50 minutes
+## Instructions
+1. Make pie dough, chill 2 hours
+2. Roll to 14-inch round
+3. Mix tahini filling
+4. Toss apples with sugar/spices
+5. Spread tahini on dough leaving border
+6. Arrange apples, fold edges
+7. Brush with cream, add seeds
+8. Bake 375°F 40-50 min
 
 ---
 
-# Pumpkin Bundt Cake with Maple Brown Butter Glaze
+# Pumpkin Bundt Cake
 
-**Ingredients:**
-For cake:
-- 3 cups AP flour
-- 2 tsp baking powder 
+## Ingredients
+
+### Cake
+- 3 cups flour 
+- 2 tsp baking powder
 - 1 tsp baking soda
+- 1 1⁄4 tsp salt
 - 2 tsp cinnamon
-- 1 1/2 tsp cardamom
-- 1/4 tsp allspice
-- 1/4 tsp pepper
+- 1 1⁄2 tsp cardamom
+- 1⁄4 tsp allspice
 - 2 cups brown sugar
-- 1/2 cup butter
-- 1/2 cup olive oil
+- 1⁄2 cup butter
+- 1⁄2 cup olive oil
 - 2 eggs
 - 15 oz pumpkin puree
-- 1/2 cup sour cream
+- 1⁄2 cup sour cream
 
-For glaze:
+### Glaze
 - 2 tbsp butter, browned
 - 1 cup powdered sugar
-- 1/4 cup maple syrup
+- 1⁄4 cup maple syrup
 - Pepitas for garnish
 
-**Instructions:**
-1. Mix dry ingredients
+## Instructions
+1. Whisk dry ingredients
 2. Beat sugar, butter, oil until fluffy
 3. Add eggs, pumpkin, sour cream
 4. Fold in dry ingredients
 5. Bake in bundt pan 350°F 55-65 min
-6. Cool, glaze with brown butter maple mixture
-7. Top with pepitas
+6. Cool 20 min before inverting
+7. Make brown butter glaze
+8. Pour over cooled cake
+9. Top with pepitas
 
 
 ## Prep Plan
 
-Here's a strategic prep schedule in table format:
+Here's a suggested prep schedule organized as a table across the dishes and days. I'll use bullet points within cells to show the prep steps.
 
-| Day | Turkey | Soups/Sides | Vegetables | Baked Goods | Desserts |
-|-----|---------|-------------|------------|-------------|-----------|
-| Sunday Night | Remove backbone, apply dry brine, refrigerate uncovered | - | - | - | - |
-| Monday | Continue brining | Make cranberry sauce and refrigerate | - | - | Make pumpkin bundt cake, wrap well once cooled |
-| Tuesday | Continue brining | - | Trim green beans and broccoli rabe, store properly | Make & freeze biscuit dough (don't bake) | Make apple tart dough, wrap & chill |
-| Wednesday | Continue brining | Prep mushroom soup ingredients (chop vegetables, measure ingredients) | Prep root vegetables for panzanella (cube parsnips, dice onions, shred sprouts) | - | Assemble apple tart but don't bake |
-| Thursday AM | Remove from fridge 1hr before cooking. Roast per recipe. Make gravy after. | Make mushroom rice soup | 1. Blanch green beans & rabe early<br>2. Final cooking of all vegetables just before serving<br>3. Roast panzanella vegetables | 1. Bake biscuits fresh<br>2. Reheat briefly if needed | 1. Bake apple tart<br>2. Make maple glaze for bundt |
+| Day | Turkey | Cranberry Sauce | Wild Rice Soup | Green Beans | Broccoli Rabe | Gravy | Root Veg Panzanella | Sage Biscuits | Apple Tart | Pumpkin Bundt |
+|-----|--------|-----------------|----------------|-------------|---------------|-------|---------------------|---------------|------------|---------------|
+| Sunday Night | • Remove backbone & butterfly<br>• Make spice mix<br>• Apply dry brine<br>• Place uncovered in fridge | | | | | | | | | |
+| Monday | • Leave turkey brining | • Make sauce<br>• Refrigerate | | | | | | | • Make & chill pie dough | |
+| Tuesday | • Leave turkey brining | | | • Trim beans | | | • Cube bread, let stale<br>• Cut vegetables | • Roast squash<br>• Puree & refrigerate | | • Mix dry ingredients<br>• Store |
+| Wednesday | • Leave turkey brining | | • Chop all vegetables<br>• Store prepped ingredients | | | • Make/freeze stock if needed<br>• Prep herbs | • Cut remaining vegetables | | • Slice apples & store in acidulated water<br>• Make tahini filling | • Make cake<br>• Store wrapped |
+| Thursday AM | • Bring to room temp (1hr)<br>• Roast<br>• Rest | • Bring to room temp | • Make soup<br>• Keep warm | • Blanch beans<br>• Final sauté before serving | • Make entirely just before serving | • Make after turkey is done | • Roast & assemble<br>• Serve warm | • Make & bake fresh | • Assemble & bake | • Make glaze<br>• Glaze cake |
 
-Key timing notes:
-- Turkey needs full 4 days of dry brining
-- Fresh-baked biscuits and tart are superior
-- Cranberry sauce improves with time to set
-- Bundt cake stays fresh several days
-- Vegetables should be prepped ahead but final cooking done just before serving
-- Soup can be made earlier Thursday and kept warm
+Notes:
+- The turkey needs the 4-day brine starting Sunday night
+- Cranberry sauce benefits from being made ahead
+- Pumpkin Bundt can be made Wednesday but glazed Thursday
+- Most vegetables and sautéed dishes are best prepared day-of
+- The Apple Tart dough needs to chill, so prep starts Monday
+- Fresh biscuits are best baked just before serving
+- Prep work (chopping, measuring) can be done 1-2 days ahead for most dishes
 
 
 ## Shopping List
 
-Here's the organized shopping list combining all recipes with checkboxes (☐):
+Here's a consolidated shopping list organized by department:
 
-# Shopping List by Department
+# Shopping List
 
 ## Produce
-☐ Yellow onions: 1 + 1/2 lb red (Mushroom Soup, Panzanella)  
-☐ Mixed mushrooms: 2 lbs (Mushroom Soup)  
-☐ Celery: 2 stalks (Mushroom Soup)  
-☐ Carrots: 1 large (Mushroom Soup)  
-☐ Fresh garlic: 12+ cloves (Mushroom Soup, Green Beans, Broccoli Rabe)  
-☐ Fresh thyme: 5+ sprigs (Mushroom Soup, Gravy, Panzanella)  
-☐ Scallions/chives and dill (Mushroom Soup)  
-☐ Fresh ginger: 6-inch piece (Green Beans)  
-☐ Green beans: 2 1/2 lbs (Green Beans)  
-☐ Broccoli rabe: 1 bunch (Broccoli Rabe)  
-☐ Fresh cranberries: 12 oz (Cranberry Sauce)  
-☐ Oranges: 1-2 (for juice and zest) (Cranberry Sauce)  
-☐ Fresh sage: for ~4 tbsp (Gravy, Biscuits, Turkey Brine)  
-☐ Fresh rosemary: for 1 tbsp (Gravy)  
-☐ Parsnips: 1 1/2 lbs (Panzanella)  
-☐ Brussels sprouts: 8 oz (Panzanella)  
-☐ Delicata squash: 1 medium (Biscuits)  
-☐ Apples: 2 lbs (Tahini Tart)  
-☐ Pumpkin puree: 15 oz (Bundt Cake)
+☐ Onions
+- Yellow: 1 (Mushroom Soup)
+- Red: 1/2 lb (Root Vegetable Panzanella)
 
-## Meat/Poultry
-☐ Whole turkey: 13-14 lbs (Turkey)
+☐ Mushrooms: 2 lbs mixed cremini/shiitake (Mushroom Soup)
+
+☐ Celery: 2 stalks (Mushroom Soup)
+
+☐ Carrots: 1 large (Mushroom Soup)
+
+☐ Garlic
+- 6 cloves (Mushroom Soup)
+- 4 cloves (Green Beans)
+- 4-5 cloves (Broccoli Rabe)
+- 2 cloves (Root Vegetable Panzanella)
+
+☐ Fresh herbs
+- Thyme: 3 sprigs (Mushroom Soup) + 2 tsp (Root Vegetable Panzanella) + 2 tbsp (Turkey Gravy)
+- Sage: 2 tbsp (Turkey Gravy) + 1 1/2 tsp chopped + leaves for garnish (Delicata Biscuits)
+- Rosemary: 1 tbsp (Turkey Gravy)
+- Scallions/chives/dill for garnish (Mushroom Soup)
+
+☐ Fresh ginger: 6 inches (Green Beans)
+
+☐ Green beans: 2 1/2 lbs
+
+☐ Broccoli rabe: 1 bunch
+
+☐ Cranberries: 12 oz
+
+☐ Orange: 1 (for juice and zest)
+
+☐ Parsnips: 1 1/2 lbs (Root Vegetable Panzanella)
+
+☐ Rutabaga: 1 lb (Root Vegetable Panzanella)
+
+☐ Brussels sprouts: 8 oz (Root Vegetable Panzanella)
+
+☐ Delicata squash: 1 medium (Delicata Biscuits)
+
+☐ Apples: 2 lbs (Tahini Tart)
+
+## Meat
+☐ Whole turkey: 13-14 lbs
 
 ## Dairy
-☐ Unsalted butter: ~2 lbs total (Multiple recipes)  
-☐ Sour cream: 1 cup (Mushroom Soup, Bundt Cake)  
-☐ Heavy cream: 1 cup (Biscuits, Tahini Tart)  
-☐ Eggs: 4-5 (Bundt Cake, Biscuits, Tahini Tart)
+☐ Butter, unsalted
+- 4 tbsp (Mushroom Soup)
+- 4 tbsp (Turkey Gravy)
+- 6 tbsp cold (Delicata Biscuits)
+- 3/4 cup cold (Tahini Tart)
+- 1/2 cup + 2 tbsp (Pumpkin Bundt)
+
+☐ Sour cream: 1/2 cup (Mushroom Soup) + 1/2 cup (Pumpkin Bundt)
+
+☐ Heavy cream
+- 3/4 cup (Delicata Biscuits)
+- For brushing (Tahini Tart)
+
+☐ Eggs: 2 (Pumpkin Bundt) + 1 (Tahini Tart) + 1 (Delicata Biscuits)
 
 ## Pantry
-☐ All-purpose flour: 8+ cups (Multiple recipes)  
-☐ Wild rice: 1 cup (Mushroom Soup)  
-☐ White wine: 1/2 cup (Mushroom Soup)  
-☐ Vegetable oil: 6+ tbsp (Green Beans, Panzanella)  
-☐ Olive oil: 1/2 cup + 2-3 tbsp (Bundt Cake, Broccoli Rabe)  
-☐ Red pepper flakes (Broccoli Rabe)  
-☐ Sugar: Regular and brown (Multiple recipes)  
-☐ Kosher salt (Multiple recipes)  
-☐ Black peppercorns (Multiple recipes)  
-☐ Allspice berries (Turkey Brine)  
-☐ Cardamom (Tahini Tart, Bundt Cake)  
-☐ Cinnamon (Bundt Cake)  
-☐ Apple cider vinegar (Panzanella, Tahini Tart)  
-☐ Tahini: 1/3 cup (Tahini Tart)  
-☐ Maple syrup: 1/4 cup (Bundt Cake)  
-☐ Powdered sugar: 1 cup (Bundt Cake)  
-☐ Baking powder and soda (Biscuits, Bundt Cake)  
-☐ Pepitas for garnish (Bundt Cake)  
-☐ Sesame seeds (Tahini Tart)
+☐ All-purpose flour
+- 1/4 cup (Mushroom Soup)
+- 1/2 cup (Turkey Gravy)
+- 2 cups (Delicata Biscuits)
+- 1 1/2 cups (Tahini Tart)
+- 3 cups (Pumpkin Bundt)
 
-## Bread
-☐ Sourdough bread: 8 oz (Panzanella)
+☐ Wild rice: 1 cup
 
-## Other
-☐ Chicken/turkey stock: 9+ cups (Mushroom Soup, Gravy)
+☐ Vegetable/chicken stock: 5 cups (Mushroom Soup) + 4 cups (Turkey Gravy)
+
+☐ White wine: 1/2 cup (Mushroom Soup)
+
+☐ Vegetable oil
+- 4 tbsp (Green Beans)
+- For Root Vegetable Panzanella
+- 1/2 cup (Pumpkin Bundt)
+
+☐ Olive oil: 2-3 tbsp (Broccoli Rabe)
+
+☐ Apple cider vinegar: 1/4 cup (Root Vegetable Panzanella) + 1 tbsp (Tahini Tart)
+
+☐ Sourdough bread: 8 oz (Root Vegetable Panzanella)
+
+☐ Tahini: 1/3 cup (Tahini Tart)
+
+☐ Pumpkin puree: 15 oz (Pumpkin Bundt)
+
+☐ Maple syrup: 1/4 cup (Pumpkin Bundt)
+
+☐ Powdered sugar: 1 cup (Pumpkin Bundt)
+
+☐ Brown sugar: 2 cups (Pumpkin Bundt)
+
+☐ Regular sugar
+- 3/4 cup (Cranberry Sauce)
+- 2 tbsp (Delicata Biscuits)
+- 3 tbsp (Tahini Tart)
+
+## Spices & Seasonings
+☐ Garlic powder: 1 tsp
+
+☐ Red pepper flakes: 1/4-1/2 tsp
+
+☐ Kosher salt: 3 1/2 tbsp (Turkey Brine)
+
+☐ Black peppercorns: 1 1/4 tsp (Turkey Brine)
+
+☐ Allspice berries: 1/2 tsp (Turkey Brine)
+
+☐ Dried herbs
+- Sage: 1 1/2 tsp (Turkey Brine)
+- Thyme: 1 1/2 tsp (Turkey Brine)
+
+☐ Cardamom: 1 tsp (Tahini Tart) + 1 1/2 tsp (Pumpkin Bundt)
+
+☐ Cinnamon: 2 tsp (Pumpkin Bundt)
+
+☐ Baking powder: 2 1/2 tsp (Delicata Biscuits) + 2 tsp (Pumpkin Bundt)
+
+☐ Baking soda: 1/2 tsp (Delicata Biscuits) + 1 tsp (Pumpkin Bundt)
+
+☐ Sesame seeds and pepitas for garnish

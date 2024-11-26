@@ -1,7 +1,9 @@
 {
   "section": {
     "title": "Broccoli Rabe",
-    "content": "Here's a simple recipe for sautéed broccoli rabe with garlic and red pepper flakes:\n\nIngredients:\n- 1 bunch broccoli rabe (rapini), trimmed\n- 3-4 cloves garlic, thinly sliced\n- 2-3 tablespoons olive oil\n- 1/4-1/2 teaspoon red pepper flakes (adjust to taste)\n- Salt and black pepper to taste\n\nInstructions:\n1. Bring a large pot of salted water to boil\n2. Blanch broccoli rabe for 1-2 minutes, then drain and shock in ice water to preserve color\n3. Heat olive oil in a large skillet over medium heat\n4. Add sliced garlic and red pepper flakes, cook until garlic is lightly golden (1-2 minutes)\n5. Add blanched broccoli rabe to the pan\n6. Sauté for 3-5 minutes until tender-crisp\n7. Season with salt and black pepper to taste\n8. Serve hot\n\nOptional: Finish with a squeeze of fresh lemon juice or a drizzle of extra virgin olive oil.\n",
+    "content": [
+      "Simple sautéed broccoli rabe with garlic and a touch of red pepper flakes.\n\n"
+    ],
     "children": [],
     "level": 3,
     "dependencies": []

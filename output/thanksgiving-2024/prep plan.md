@@ -1,17 +1,10 @@
-Here's a strategic prep schedule in table format:
-
-| Day | Turkey | Soups/Sides | Vegetables | Baked Goods | Desserts |
-|-----|---------|-------------|------------|-------------|-----------|
-| Sunday Night | Remove backbone, apply dry brine, refrigerate uncovered | - | - | - | - |
-| Monday | Continue brining | Make cranberry sauce and refrigerate | - | - | Make pumpkin bundt cake, wrap well once cooled |
-| Tuesday | Continue brining | - | Trim green beans and broccoli rabe, store properly | Make & freeze biscuit dough (don't bake) | Make apple tart dough, wrap & chill |
-| Wednesday | Continue brining | Prep mushroom soup ingredients (chop vegetables, measure ingredients) | Prep root vegetables for panzanella (cube parsnips, dice onions, shred sprouts) | - | Assemble apple tart but don't bake |
-| Thursday AM | Remove from fridge 1hr before cooking. Roast per recipe. Make gravy after. | Make mushroom rice soup | 1. Blanch green beans & rabe early<br>2. Final cooking of all vegetables just before serving<br>3. Roast panzanella vegetables | 1. Bake biscuits fresh<br>2. Reheat briefly if needed | 1. Bake apple tart<br>2. Make maple glaze for bundt |
-
-Key timing notes:
-- Turkey needs full 4 days of dry brining
-- Fresh-baked biscuits and tart are superior
-- Cranberry sauce improves with time to set
-- Bundt cake stays fresh several days
-- Vegetables should be prepped ahead but final cooking done just before serving
-- Soup can be made earlier Thursday and kept warm
+{
+  "title": "Prep Plan",
+  "content": "Here's a suggested prep schedule organized as a table across the dishes and days. I'll use bullet points within cells to show the prep steps.\n\n| Day | Turkey | Cranberry Sauce | Wild Rice Soup | Green Beans | Broccoli Rabe | Gravy | Root Veg Panzanella | Sage Biscuits | Apple Tart | Pumpkin Bundt |\n|-----|--------|-----------------|----------------|-------------|---------------|-------|---------------------|---------------|------------|---------------|\n| Sunday Night | • Remove backbone & butterfly<br>• Make spice mix<br>• Apply dry brine<br>• Place uncovered in fridge | | | | | | | | | |\n| Monday | • Leave turkey brining | • Make sauce<br>• Refrigerate | | | | | | | • Make & chill pie dough | |\n| Tuesday | • Leave turkey brining | | | • Trim beans | | | • Cube bread, let stale<br>• Cut vegetables | • Roast squash<br>• Puree & refrigerate | | • Mix dry ingredients<br>• Store |\n| Wednesday | • Leave turkey brining | | • Chop all vegetables<br>• Store prepped ingredients | | | • Make/freeze stock if needed<br>• Prep herbs | • Cut remaining vegetables | | • Slice apples & store in acidulated water<br>• Make tahini filling | • Make cake<br>• Store wrapped |\n| Thursday AM | • Bring to room temp (1hr)<br>• Roast<br>• Rest | • Bring to room temp | • Make soup<br>• Keep warm | • Blanch beans<br>• Final sauté before serving | • Make entirely just before serving | • Make after turkey is done | • Roast & assemble<br>• Serve warm | • Make & bake fresh | • Assemble & bake | • Make glaze<br>• Glaze cake |\n\nNotes:\n- The turkey needs the 4-day brine starting Sunday night\n- Cranberry sauce benefits from being made ahead\n- Pumpkin Bundt can be made Wednesday but glazed Thursday\n- Most vegetables and sautéed dishes are best prepared day-of\n- The Apple Tart dough needs to chill, so prep starts Monday\n- Fresh biscuits are best baked just before serving\n- Prep work (chopping, measuring) can be done 1-2 days ahead for most dishes\n",
+  "children": [],
+  "level": 2,
+  "dependencies": [
+    "Formatted Recipes",
+    "Dishes to Prepare"
+  ]
+}

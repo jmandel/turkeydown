@@ -1,60 +1,9 @@
-Here's the organized shopping list combining all recipes with checkboxes (☐):
-
-# Shopping List by Department
-
-## Produce
-☐ Yellow onions: 1 + 1/2 lb red (Mushroom Soup, Panzanella)  
-☐ Mixed mushrooms: 2 lbs (Mushroom Soup)  
-☐ Celery: 2 stalks (Mushroom Soup)  
-☐ Carrots: 1 large (Mushroom Soup)  
-☐ Fresh garlic: 12+ cloves (Mushroom Soup, Green Beans, Broccoli Rabe)  
-☐ Fresh thyme: 5+ sprigs (Mushroom Soup, Gravy, Panzanella)  
-☐ Scallions/chives and dill (Mushroom Soup)  
-☐ Fresh ginger: 6-inch piece (Green Beans)  
-☐ Green beans: 2 1/2 lbs (Green Beans)  
-☐ Broccoli rabe: 1 bunch (Broccoli Rabe)  
-☐ Fresh cranberries: 12 oz (Cranberry Sauce)  
-☐ Oranges: 1-2 (for juice and zest) (Cranberry Sauce)  
-☐ Fresh sage: for ~4 tbsp (Gravy, Biscuits, Turkey Brine)  
-☐ Fresh rosemary: for 1 tbsp (Gravy)  
-☐ Parsnips: 1 1/2 lbs (Panzanella)  
-☐ Brussels sprouts: 8 oz (Panzanella)  
-☐ Delicata squash: 1 medium (Biscuits)  
-☐ Apples: 2 lbs (Tahini Tart)  
-☐ Pumpkin puree: 15 oz (Bundt Cake)
-
-## Meat/Poultry
-☐ Whole turkey: 13-14 lbs (Turkey)
-
-## Dairy
-☐ Unsalted butter: ~2 lbs total (Multiple recipes)  
-☐ Sour cream: 1 cup (Mushroom Soup, Bundt Cake)  
-☐ Heavy cream: 1 cup (Biscuits, Tahini Tart)  
-☐ Eggs: 4-5 (Bundt Cake, Biscuits, Tahini Tart)
-
-## Pantry
-☐ All-purpose flour: 8+ cups (Multiple recipes)  
-☐ Wild rice: 1 cup (Mushroom Soup)  
-☐ White wine: 1/2 cup (Mushroom Soup)  
-☐ Vegetable oil: 6+ tbsp (Green Beans, Panzanella)  
-☐ Olive oil: 1/2 cup + 2-3 tbsp (Bundt Cake, Broccoli Rabe)  
-☐ Red pepper flakes (Broccoli Rabe)  
-☐ Sugar: Regular and brown (Multiple recipes)  
-☐ Kosher salt (Multiple recipes)  
-☐ Black peppercorns (Multiple recipes)  
-☐ Allspice berries (Turkey Brine)  
-☐ Cardamom (Tahini Tart, Bundt Cake)  
-☐ Cinnamon (Bundt Cake)  
-☐ Apple cider vinegar (Panzanella, Tahini Tart)  
-☐ Tahini: 1/3 cup (Tahini Tart)  
-☐ Maple syrup: 1/4 cup (Bundt Cake)  
-☐ Powdered sugar: 1 cup (Bundt Cake)  
-☐ Baking powder and soda (Biscuits, Bundt Cake)  
-☐ Pepitas for garnish (Bundt Cake)  
-☐ Sesame seeds (Tahini Tart)
-
-## Bread
-☐ Sourdough bread: 8 oz (Panzanella)
-
-## Other
-☐ Chicken/turkey stock: 9+ cups (Mushroom Soup, Gravy)
+{
+  "title": "Shopping List",
+  "content": "Here's a consolidated shopping list organized by department:\n\n# Shopping List\n\n## Produce\n☐ Onions\n- Yellow: 1 (Mushroom Soup)\n- Red: 1/2 lb (Root Vegetable Panzanella)\n\n☐ Mushrooms: 2 lbs mixed cremini/shiitake (Mushroom Soup)\n\n☐ Celery: 2 stalks (Mushroom Soup)\n\n☐ Carrots: 1 large (Mushroom Soup)\n\n☐ Garlic\n- 6 cloves (Mushroom Soup)\n- 4 cloves (Green Beans)\n- 4-5 cloves (Broccoli Rabe)\n- 2 cloves (Root Vegetable Panzanella)\n\n☐ Fresh herbs\n- Thyme: 3 sprigs (Mushroom Soup) + 2 tsp (Root Vegetable Panzanella) + 2 tbsp (Turkey Gravy)\n- Sage: 2 tbsp (Turkey Gravy) + 1 1/2 tsp chopped + leaves for garnish (Delicata Biscuits)\n- Rosemary: 1 tbsp (Turkey Gravy)\n- Scallions/chives/dill for garnish (Mushroom Soup)\n\n☐ Fresh ginger: 6 inches (Green Beans)\n\n☐ Green beans: 2 1/2 lbs\n\n☐ Broccoli rabe: 1 bunch\n\n☐ Cranberries: 12 oz\n\n☐ Orange: 1 (for juice and zest)\n\n☐ Parsnips: 1 1/2 lbs (Root Vegetable Panzanella)\n\n☐ Rutabaga: 1 lb (Root Vegetable Panzanella)\n\n☐ Brussels sprouts: 8 oz (Root Vegetable Panzanella)\n\n☐ Delicata squash: 1 medium (Delicata Biscuits)\n\n☐ Apples: 2 lbs (Tahini Tart)\n\n## Meat\n☐ Whole turkey: 13-14 lbs\n\n## Dairy\n☐ Butter, unsalted\n- 4 tbsp (Mushroom Soup)\n- 4 tbsp (Turkey Gravy)\n- 6 tbsp cold (Delicata Biscuits)\n- 3/4 cup cold (Tahini Tart)\n- 1/2 cup + 2 tbsp (Pumpkin Bundt)\n\n☐ Sour cream: 1/2 cup (Mushroom Soup) + 1/2 cup (Pumpkin Bundt)\n\n☐ Heavy cream\n- 3/4 cup (Delicata Biscuits)\n- For brushing (Tahini Tart)\n\n☐ Eggs: 2 (Pumpkin Bundt) + 1 (Tahini Tart) + 1 (Delicata Biscuits)\n\n## Pantry\n☐ All-purpose flour\n- 1/4 cup (Mushroom Soup)\n- 1/2 cup (Turkey Gravy)\n- 2 cups (Delicata Biscuits)\n- 1 1/2 cups (Tahini Tart)\n- 3 cups (Pumpkin Bundt)\n\n☐ Wild rice: 1 cup\n\n☐ Vegetable/chicken stock: 5 cups (Mushroom Soup) + 4 cups (Turkey Gravy)\n\n☐ White wine: 1/2 cup (Mushroom Soup)\n\n☐ Vegetable oil\n- 4 tbsp (Green Beans)\n- For Root Vegetable Panzanella\n- 1/2 cup (Pumpkin Bundt)\n\n☐ Olive oil: 2-3 tbsp (Broccoli Rabe)\n\n☐ Apple cider vinegar: 1/4 cup (Root Vegetable Panzanella) + 1 tbsp (Tahini Tart)\n\n☐ Sourdough bread: 8 oz (Root Vegetable Panzanella)\n\n☐ Tahini: 1/3 cup (Tahini Tart)\n\n☐ Pumpkin puree: 15 oz (Pumpkin Bundt)\n\n☐ Maple syrup: 1/4 cup (Pumpkin Bundt)\n\n☐ Powdered sugar: 1 cup (Pumpkin Bundt)\n\n☐ Brown sugar: 2 cups (Pumpkin Bundt)\n\n☐ Regular sugar\n- 3/4 cup (Cranberry Sauce)\n- 2 tbsp (Delicata Biscuits)\n- 3 tbsp (Tahini Tart)\n\n## Spices & Seasonings\n☐ Garlic powder: 1 tsp\n\n☐ Red pepper flakes: 1/4-1/2 tsp\n\n☐ Kosher salt: 3 1/2 tbsp (Turkey Brine)\n\n☐ Black peppercorns: 1 1/4 tsp (Turkey Brine)\n\n☐ Allspice berries: 1/2 tsp (Turkey Brine)\n\n☐ Dried herbs\n- Sage: 1 1/2 tsp (Turkey Brine)\n- Thyme: 1 1/2 tsp (Turkey Brine)\n\n☐ Cardamom: 1 tsp (Tahini Tart) + 1 1/2 tsp (Pumpkin Bundt)\n\n☐ Cinnamon: 2 tsp (Pumpkin Bundt)\n\n☐ Baking powder: 2 1/2 tsp (Delicata Biscuits) + 2 tsp (Pumpkin Bundt)\n\n☐ Baking soda: 1/2 tsp (Delicata Biscuits) + 1 tsp (Pumpkin Bundt)\n\n☐ Sesame seeds and pepitas for garnish\n",
+  "children": [],
+  "level": 2,
+  "dependencies": [
+    "Formatted Recipes"
+  ]
+}

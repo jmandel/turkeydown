@@ -1,0 +1,25 @@
+{
+  "section": {
+    "title": "Total Timing",
+    "content": [
+      "65 Minutes Active Time\n"
+    ],
+    "children": [
+      {
+        "title": "Single Recipe Timing",
+        "content": [
+          "{\"minutes\": 50}\n",
+          "{\"minutes\": 15}\n"
+        ],
+        "children": [],
+        "level": 3,
+        "dependencies": [
+          "Recipes#per"
+        ]
+      }
+    ],
+    "level": 2,
+    "dependencies": []
+  },
+  "resolvedDependencies": {}
+}
