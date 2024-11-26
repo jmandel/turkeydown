@@ -1,21 +1,22 @@
-# Markdown Recipe Processor
+# turkeydown
 
-A powerful markdown processor that can fetch recipes from URLs, process them with AI, and generate organized meal prep plans. The processor handles nested sections, dependencies between sections, and can automatically fetch and parse recipe data from popular cooking websites.
+A specialized markdown processor for planning complex meals like Thanksgiving dinner. Process recipes from multiple sources, generate AI-assisted prep schedules, and create consolidated shopping lists - all driven by a simple markdown format.
 
 ## Features
 
-- 📝 Process structured markdown documents with nested sections
-- 🔗 Automatically fetch and parse recipe data from URLs
-- 🤖 Process sections using AI (Claude 3.5 Sonnet)
-- 📊 Generate dependency-aware processing of sections
-- 📁 Debug output showing processing steps
+- 📝 Process structured markdown with nested sections and dependencies
+- 🔗 Fetch and parse recipes from cooking websites
+- 🤖 Process content with AI (Claude 3.5 Sonnet)
+- 📊 Smart handling of repeated tasks with `#per-child` and `{{variable#per}}`
+- 📁 Organized output with debug info
 - 🔄 Template variable substitution
 
 ## Installation
 
+```bash
 # Clone the repository
-git clone [repository-url]
-cd [repository-name]
+git clone https://github.com/jmandel/turkeydown
+cd turkeydown
 
 # Install dependencies
 bun install
@@ -23,86 +24,97 @@ bun install
 
 Requirements:
 - Bun runtime
-- Pandoc (for text extraction)
-- LLM CLI tool configured with Claude access
+- `llm` CLI tool configured with Claude access
 
 ## Usage
 
 Create a markdown file with sections marked for different types of processing:
 
-```
-# My Recipe Plan
+```markdown
+# Thanksgiving 2024
+
+## Recipes (#llm #per-child)
+Consider the recipe below.
+
+Convert this into a structured markdown with title (###), ingredients (####), 
+and steps (####).
+
+Recipe...
 
 ## Wild Rice Soup (#fetch)
 https://cooking.nytimes.com/recipes/1021942-pressure-cooker-mushroom-and-wild-rice-soup
 
-## Prep Schedule (#llm)
+## Prep Plan (#llm)
 Here are our recipes:
-{{Wild Rice Soup}}
+{{Recipes}}
 
-Create a prep schedule for the above recipes.
+Create a prep schedule starting Sunday through Thursday...
+
+## Shopping List (#llm)
+Based on these formatted recipes:
+{{Recipes}}
+
+Create a consolidated shopping list organized by department...
 ```
 
 Process the file:
-```
+```bash
 bun run src/index.ts input.md
 ```
 
-## Example: Meal Prep Planning
+## Special Processing Directives
 
-The processor is particularly useful for meal prep planning. Here's a typical workflow:
+### Resolution Types
+- `#fetch`: Fetches and parses content from URLs
+- `#llm`: Processes content using AI
+- `#passthrough`: Keeps content as-is (default)
 
-1. Create a markdown file with sections for:
-   - Recipe URLs (#fetch)
-   - Recipe formatting (#llm)
-   - Prep schedule generation (#llm)
-   - Shopping list compilation (#llm)
+### Processing Modifiers
+- `#per-child`: Processes each child section separately
+  - Useful for applying the same transformation to multiple recipes
+- `{{variable#per}}`: References each item in a section separately
+  - Allows iteration over items in a section
 
-2. Use template variables to pass data between sections:
-   ```
-   # Recipes
-   
-   ## Wild Rice Soup (#fetch)
-   https://cooking.nytimes.com/recipes/wild-rice-soup
-   
-   ## Formatted Recipes (#llm)
-   Here are the recipes to format:
-   {{Wild Rice Soup}}
-   
-   ## Shopping List (#llm)
-   Based on these recipes:
-   {{Formatted Recipes}}
-   
-   Create a consolidated shopping list.
-   ```
+## Example: Recipe Processing
 
-3. The processor will:
-   - Fetch recipe data from URLs
-   - Use AI to format recipes consistently
-   - Generate a shopping list
-   - Create prep schedules
-   - Output each section to separate files
+```markdown
+## Recipes (#llm #per-child)
+Format each recipe below into a consistent structure...
+
+### Wild Rice Soup (#fetch)
+https://cooking.nytimes.com/recipes/wild-rice-soup
+
+### Green Beans (#fetch)
+https://cooking.nytimes.com/recipes/green-beans
+```
+
+The `#per-child` directive tells the processor to:
+1. Process each child section (Wild Rice Soup, Green Beans)
+2. Apply the parent section's LLM prompt to each one
+3. Combine the results
 
 ## Output Structure
 
 ```
 output/
-  inputfile/
+  thanksgiving-2024/
     debug/
-      section-name-input.json  # Debug info for each section
-    section-name.md           # Processed output for each section
+      section-processing-details.json
+    recipes.md
+    prep-plan.md
+    shopping-list.md
 ```
-
-## Processing Types
-
-- `#fetch`: Fetches and parses content from URLs
-- `#llm`: Processes content using AI
-- `#passthrough`: Keeps content as-is (default)
 
 ## Template Variables
 
-Use `{{Section Name}}` to reference content from other sections. The processor will automatically handle dependencies and process sections in the correct order.
+- Basic: `{{Section Name}}` - Includes entire section content
+- Per-item: `{{Section Name#per}}` - References each item in a section separately
+- Dependencies are automatically resolved in the correct order
 
 ## License
 
-[License Type]
+MIT
+
+## Contributing
+
+Contributions welcome! Please feel free to submit a Pull Request.
