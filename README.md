@@ -34,15 +34,15 @@ Create a markdown file with sections marked for different types of processing:
 # Thanksgiving 2024
 
 ## Recipes (#llm #per-child)
-Consider the recipe below.
 
-Convert this into a structured markdown with title (###), ingredients (####), 
+Consider the recipe below. Convert it into sructured markdown with title (###), ingredients (####), 
 and steps (####).
 
-Recipe...
-
-## Wild Rice Soup (#fetch)
+### Wild Rice Soup (#fetch)
 https://cooking.nytimes.com/recipes/1021942-pressure-cooker-mushroom-and-wild-rice-soup
+
+### Turkey Roulade (#llm)
+Fussy but delicious breast meat rolls, stuffed with dark meat sausage, skin-wrapped and oven roasted.
 
 ## Prep Plan (#llm)
 Here are our recipes:
