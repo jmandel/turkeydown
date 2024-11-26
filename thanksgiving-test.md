@@ -41,3 +41,9 @@ Now output a table where the rows are days (Sunday night, Monday, Tuesday, Wedne
 Notes:
   * Focus Sunday on Turkey prep only.
   * Baked goods should be baked fresh on Thanksgiving unless they strictly benefit form make-ahead.
+
+## Shopping List (#llm)
+Here are all the recipes we're making:
+{{Formatted Recipes}}
+
+Please create a consolidated shopping list organized by department (Produce, Meat/Seafood, Dairy, Pantry, etc.). Combine quantities where possible and round up to standard package sizes. Include any basic pantry items that the recipes might assume we have (salt, pepper, oil, etc.).

@@ -1,16 +1,16 @@
-Here's a prep schedule table for the two dishes, keeping Sunday focused on turkey prep and optimizing for both freshness and efficient time management:
+Here's a prep schedule table for the two dishes, keeping in mind the notes about Sunday and baked goods:
 
 | Day | Wild Rice Soup | Broccoli Rabe |
 |-----|----------------|---------------|
-| Sunday Night | No prep (turkey day) | No prep (turkey day) |
-| Monday | - Chop mushrooms, onions, celery, carrots, and garlic<br>- Store prepped vegetables separately in airtight containers | None |
-| Tuesday | - Make full soup through step 4<br>- Cool and store (don't add sour cream yet) | None |
-| Wednesday | None | - Trim broccoli rabe<br>- Slice garlic<br>- Store prepped ingredients separately |
-| Thursday AM | - Reheat soup gently<br>- Complete steps 6-7 with sour cream and garnishes | - Blanch broccoli rabe<br>- Complete final sauté just before serving |
+| Sunday | Skip - focus on turkey | Skip - focus on turkey |
+| Monday | - Chop mushrooms<br>- Dice onions, carrots, celery<br>- Smash/chop garlic | No prep needed |
+| Tuesday | No prep needed | - Trim broccoli rabe<br>- Slice garlic |
+| Wednesday | - Make complete soup<br>- Store in fridge (don't add sour cream yet) | No prep needed |
+| Thursday | - Reheat soup gently<br>- Add sour cream when warm<br>- Chop fresh herbs for garnish | - Blanch and shock broccoli rabe<br>- Final sauté with garlic<br>- Season and serve hot |
 
-This schedule:
-- Allows the soup flavors to develop over time
-- Keeps the broccoli rabe fresh and crisp
-- Consolidates chopping tasks on Monday
-- Avoids overwhelming Thursday with too many tasks
-- Preserves the best texture for both dishes
+Key Strategy Notes:
+- The soup benefits from being made ahead as flavors develop overnight
+- Broccoli rabe is best prepared fresh day-of for optimal texture and color
+- Wednesday prep of the soup allows for easy reheating on Thursday
+- Chopping/prep work is spread across Monday and Tuesday to avoid overwhelm
+- All fresh herb garnishes are left for Thursday

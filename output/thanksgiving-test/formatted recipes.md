@@ -30,7 +30,7 @@ Here's the recipe converted to the requested markdown format:
 
 5. Stir the soup and check the texture of the wild rice; if it needs a bit more time repeat the pressure cooking process for a cook time of 2 minutes and rapidly release the pressure. Check the texture of the soup; if you'd like it to be thicker, turn on the sauté function and let the soup simmer to reduce to desired consistency. Turn off the heat.
 
-6. Put the sour cream in a small bowl and slowly whisk in a few spoonfuls of warm soup until smooth, then stir the mixture into the soup. (This prevents the sour cream from separating.) Taste the soup and add salt and pepper to taste.
+6. Put the sour cream in a small bowl and slowly whisk in a few spoonfuls of warm soup until smooth, then stir the mixture into the soup. Taste the soup and add salt and pepper to taste.
 
 7. Serve the soup in bowls topped with chopped scallions or chives and dill. Reheat any leftovers on low until warm. (Boiling can cause the sour cream to break.)
 
@@ -41,16 +41,17 @@ Here's the recipe converted to the requested markdown format:
 - 1 bunch broccoli rabe (rapini), trimmed
 - 3-4 cloves garlic, thinly sliced
 - 2-3 tablespoons olive oil
-- 1/4-1/2 teaspoon red pepper flakes
+- 1/4-1/2 teaspoon red pepper flakes (adjust to taste)
 - Salt and black pepper to taste
 
 ## Steps
-1. Trim tough ends from broccoli rabe and wash thoroughly.
+1. Bring a large pot of salted water to boil
+2. Blanch broccoli rabe for 1-2 minutes, then drain and shock in ice water to preserve color
+3. Heat olive oil in a large skillet over medium heat
+4. Add sliced garlic and red pepper flakes, cook until garlic is lightly golden (1-2 minutes)
+5. Add blanched broccoli rabe to the pan
+6. Sauté for 3-5 minutes until tender-crisp
+7. Season with salt and black pepper to taste
+8. Serve hot
 
-2. Bring a large pot of salted water to boil. Blanch broccoli rabe for 1-2 minutes, then drain and plunge into ice water. Drain well and pat dry.
-
-3. Heat olive oil in a large skillet over medium heat. Add sliced garlic and red pepper flakes, sauté until garlic is light golden (1-2 minutes).
-
-4. Add broccoli rabe to the pan. Season with salt and black pepper, then sauté for 3-5 minutes until tender but still crisp.
-
-5. Serve hot as a side dish. Optionally finish with a squeeze of lemon juice or a drizzle of extra virgin olive oil.
+Optional: Finish with a squeeze of fresh lemon juice or a drizzle of extra virgin olive oil.

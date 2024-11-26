@@ -18,6 +18,15 @@ interface Section {
   };
   level: number;  // Header level (# = 1, ## = 2, etc.)
   children: Section[];
+  parent?: Section;
+}
+
+interface ResolvedSection {
+  title: string;
+  content: string;
+  children: ResolvedSection[];
+  level: number;
+  dependencies: string[];
 }
 
 // Parser
@@ -116,10 +125,12 @@ class Resolver {
   private readonly urlPattern = /^https?:\/\/.+/;
   private parser: typeof MarkdownParser;
   private originalSections: Section[];
+  private debugDir: string;
   
-  constructor(markdown: string) {
+  constructor(markdown: string, debugDir: string) {
     this.parser = MarkdownParser;
     this.originalSections = MarkdownParser.parse(markdown);
+    this.debugDir = debugDir;
   }
   
   private async extractRecipeData(html: string): Promise<string> {
@@ -267,24 +278,79 @@ class Resolver {
     return results.join('\n\n');
   }
 
-  async resolveSection(section: Section, resolvedSections: Map<string, string>): Promise<string> {
-    let content = await MarkdownParser.getSectionContent(section, resolvedSections);
+  async resolveSection(section: Section, resolvedSections: Map<string, ResolvedSection>): Promise<string> {
+    console.log(`\nResolving section: ${section.title}`);
+    console.log(`Dependencies:`, section.dependencies);
     
-    // Check if any template variable contains #foreach
-    const foreachVar = section.template?.variables.find(v => v.includes('#foreach'));
-    if (foreachVar) {
-      return this.resolveForeachSection(section, foreachVar, resolvedSections);
-    }
+    // Debug logging of input state
+    const debugInput = {
+      section: {
+        title: section.title,
+        content: section.content,
+        resolveType: section.resolveType,
+        dependencies: section.dependencies,
+        template: section.template
+      },
+      resolvedDependencies: Object.fromEntries(
+        section.dependencies.map(dep => {
+          const baseDep = dep.split('#')[0];
+          const resolvedSection = resolvedSections.get(baseDep);
+          console.log(`\nProcessing dependency ${baseDep}:`);
+          console.log(`- Found resolved section:`, !!resolvedSection);
+          if (resolvedSection) {
+            console.log(`- Number of children:`, resolvedSection.children.length);
+            console.log(`- Children titles:`, resolvedSection.children.map(c => c.title));
+          }
+          
+          if (!resolvedSection) return [dep, null];
+          
+          // Combine parent and children content for the dependency
+          const allContent = [
+            resolvedSection.content,
+            ...resolvedSection.children.map(child => child.content)
+          ].filter(Boolean);
+          
+          const combined = allContent.join('\n\n');
+          console.log(`- Combined content length:`, combined.length);
+          console.log(`- Content preview:`, combined.slice(0, 100));
+          console.log('All', resolvedSection)
+          
+          return [dep, combined];
+        })
+      )
+    };
     
-    // Regular template variable replacement for non-foreach sections
+    // Write debug input to file
+    const debugPath = join(this.debugDir, `${section.title.toLowerCase()}-input.json`);
+    await Bun.write(debugPath, JSON.stringify(debugInput, null, 2));
+
+    let content = section.content;
+    
+    // Check for #foreach variables before other processing
     if (section.template?.variables) {
+      const foreachVar = section.template.variables.find(v => v.includes('#foreach'));
+      if (foreachVar) {
+        return await this.resolveForeachSection(section, foreachVar, resolvedSections);
+      }
+
+      // Regular template variable replacement continues as before...
       for (const variable of section.template.variables) {
         const cleanVar = variable.replace(/[{}]/g, '').trim();
-        const replacement = resolvedSections.get(cleanVar) || '';
-        content = content.replace(variable, replacement);
+        const resolvedSection = resolvedSections.get(cleanVar.split('#')[0]);
+        
+        if (resolvedSection) {
+          const allContent = [
+            resolvedSection.content,
+            ...resolvedSection.children.map(child => child.content)
+          ].filter(Boolean);
+          
+          const replacement = allContent.join('\n\n');
+          content = content.replace(variable, replacement);
+        }
       }
     }
     
+    // Apply resolution based on type
     switch (section.resolveType) {
       case 'fetch':
         if (this.urlPattern.test(content.trim())) {
@@ -303,44 +369,32 @@ class Resolver {
     }
   }
 
-  private async resolveForeachSection(
+  async resolveForeachSection(
     section: Section, 
     foreachVar: string, 
-    resolvedSections: Map<string, string>
+    resolvedSections: Map<string, ResolvedSection>
   ): Promise<string> {
-    // Extract the section name before #foreach
     const targetSectionName = foreachVar.replace(/[{}]/g, '').split('#')[0].trim();
+    const targetSection = resolvedSections.get(targetSectionName);
     
-    // Find the target section in the original section tree
-    const findSection = (sections: Section[]): Section | undefined => {
-      for (const s of sections) {
-        if (s.title === targetSectionName) return s;
-        const found = findSection(s.children);
-        if (found) return found;
-      }
-      return undefined;
-    };
-
-    const targetSection = findSection(this.originalSections);
-
     if (!targetSection) {
       throw new Error(`Could not find section ${targetSectionName} for foreach operation`);
     }
 
-    // Process the template once for each child of the target section
+    // Process template for each child
     const results = await Promise.all(targetSection.children.map(async childSection => {
-      let content = await MarkdownParser.getSectionContent(section, resolvedSections);
+      let content = section.content;
       
-      // Replace the #foreach variable with the child's content
-      const childContent = resolvedSections.get(childSection.title) || '';
-      content = content.replace(foreachVar, childContent);
+      // Replace the #foreach variable with child's content
+      content = content.replace(foreachVar, childSection.content || '');
       
-      // Replace any other template variables
+      // Replace other template variables
       if (section.template?.variables) {
         for (const variable of section.template.variables) {
-          if (variable === foreachVar) continue; // Skip the foreach variable
+          if (variable === foreachVar) continue;
           const cleanVar = variable.replace(/[{}]/g, '').trim();
-          const replacement = resolvedSections.get(cleanVar) || '';
+          const resolvedSection = resolvedSections.get(cleanVar);
+          const replacement = resolvedSection?.content || '';
           content = content.replace(variable, replacement);
         }
       }
@@ -348,7 +402,6 @@ class Resolver {
       return await this.resolveLLM(content);
     }));
 
-    // Combine all results
     return results.join('\n\n');
   }
 }
@@ -359,6 +412,7 @@ class MarkdownProcessor {
   private resolver!: Resolver;  // Use definite assignment assertion
   private debugDir: string;
   private outputDir: string;
+  private resolvedSections = new Map<string, ResolvedSection>();
   
   constructor(inputFile: string) {
     this.parser = MarkdownParser;
@@ -375,85 +429,149 @@ class MarkdownProcessor {
   private async flattenSections(sections: Section[]): Promise<Section[]> {
     const flattened: Section[] = [];
     
-    const flatten = (section: Section) => {
+    const addSection = (section: Section, parent?: Section) => {
+      // Set parent relationship
+      if (parent) {
+        section.parent = parent;
+      }
+      
+      // Add section to flattened list
       flattened.push(section);
-      section.children.forEach(flatten);
+      
+      // Process children
+      section.children.forEach(child => {
+        addSection(child, section);
+      });
     };
     
-    sections.forEach(flatten);
+    sections.forEach(section => addSection(section));
     return flattened;
   }
   
-  async process(markdown: string): Promise<Map<string, string>> {
-    // Initialize resolver with the markdown content
-    this.resolver = new Resolver(markdown);
+  private async generateRootDocument(sections: Section[]): Promise<string> {
+    let content = '';
     
-    const sections = this.parser.parse(markdown);
-    console.log("Parsed sections:", JSON.stringify(sections, null, 2));
-
-    const resolvedSections = new Map<string, string>();
-    const allSections = await this.flattenSections(sections);
-    
-    // Build dependency graph
-    const graph = new Map<string, string[]>();
-    for (const section of allSections) {
-      graph.set(section.title, section.dependencies);
+    // Process each root-level section
+    for (const section of sections) {
+      const resolvedSection = this.resolvedSections.get(section.title);
+      if (resolvedSection) {
+        // Add header
+        content += `${'#'.repeat(section.level)} ${section.title}\n\n`;
+        // Add content
+        content += `${resolvedSection.content}\n\n`;
+        
+        // Add children content with proper header levels
+        for (const child of resolvedSection.children) {
+          content += `${'#'.repeat(child.level)} ${child.title}\n\n`;
+          content += `${child.content}\n\n`;
+        }
+      }
     }
     
-    // Resolve sections in dependency order
-    const resolved = new Set<string>();
+    return content.trim();
+  }
+
+  async process(markdown: string): Promise<Map<string, ResolvedSection>> {
+    this.resolver = new Resolver(markdown, this.debugDir);
     
-    const resolveSection = async (title: string) => {
-      if (resolved.has(title)) return;
+    const sections = this.parser.parse(markdown);
+    const allSections = await this.flattenSections(sections);
+    
+    // Build dependency graph (without parent dependencies)
+    const graph = new Map<string, string[]>();
+    const inProgress = new Set<string>();  // Track sections being resolved
+    
+    for (const section of allSections) {
+      graph.set(section.title, [...section.dependencies]);
+    }
+    
+    const resolveSection = async (title: string): Promise<void> => {
+      // Skip if already resolved or in progress
+      if (this.resolvedSections.has(title) || inProgress.has(title)) {
+        console.log(`✓ Skipping ${title} (already resolved or in progress)`);
+        return;
+      }
+      
+      const outputPath = join(this.outputDir, `${title.toLowerCase()}.md`);
+      console.log(`⏳ Starting ${title} -> ${outputPath}`);
+      inProgress.add(title);
       
       const section = allSections.find(s => s.title === title);
-      if (!section) return;
-      
-      // Resolve dependencies first
-      const deps = graph.get(title) || [];
-      for (const dep of deps) {
-        await resolveSection(dep);
+      if (!section) {
+        inProgress.delete(title);
+        return;
       }
+      
+      try {
+        // First resolve all explicit dependencies
+        const deps = graph.get(title) || [];
+        for (const dep of deps) {
+          await resolveSection(dep);
+        }
 
-      // Resolve children first
-      for (const child of section.children) {
-        await resolveSection(child.title);
+        // Then resolve all children sequentially
+        for (const child of section.children) {
+          await resolveSection(child.title);
+        }
+        
+        // Now resolve the section itself
+        const resolvedContent = await this.resolver.resolveSection(section, this.resolvedSections);
+        
+        // Create resolved section with hierarchy and store it
+        const resolvedSection: ResolvedSection = {
+          title: section.title,
+          content: resolvedContent,
+          children: section.children
+            .map(child => this.resolvedSections.get(child.title))
+            .filter((child): child is ResolvedSection => child !== undefined),
+          level: section.level,
+          dependencies: section.dependencies
+        };
+        
+        this.resolvedSections.set(title, resolvedSection);
+        
+        // Write output files immediately after resolution
+        await this.writeOutputFiles(resolvedSection);
+        
+        console.log(`✓ Completed ${title} -> ${outputPath}`);
+      } finally {
+        inProgress.delete(title);
       }
-      
-      // Write debug input file
-      const debugInput = {
-        section,
-        resolvedDependencies: Object.fromEntries(
-          [...resolvedSections.entries()]
-            .filter(([key]) => section.dependencies.includes(key))
-        )
-      };
-      await Bun.write(
-        join(this.debugDir, `${section.title.toLowerCase()}-input.json`),
-        JSON.stringify(debugInput, null, 2)
-      );
-      
-      // Resolve section
-      const resolvedContent = await this.resolver.resolveSection(section, resolvedSections);
-      
-      // Write output immediately
-      await Bun.write(
-        join(this.outputDir, `${section.title.toLowerCase()}.md`),
-        resolvedContent
-      );
-      
-      resolvedSections.set(title, resolvedContent);
-      resolved.add(title);
-      
-      console.log(`✓ Resolved ${title}`);
     };
     
-    // Resolve all sections
-    for (const section of allSections) {
+    // Process sections sequentially, starting from the root
+    for (const section of sections) {
       await resolveSection(section.title);
     }
     
-    return resolvedSections;
+    // After processing all sections, generate and write root document
+    const rootContent = await this.generateRootDocument(sections);
+    const rootFilename = join(this.outputDir, `${sections[0].title.toLowerCase()}.md`);
+    await Bun.write(rootFilename, rootContent);
+    
+    return this.resolvedSections;
+  }
+
+  private async writeOutputFiles(section: ResolvedSection) {
+    // Write debug input
+    const debugInput = {
+      section,
+      resolvedDependencies: Object.fromEntries(
+        [...this.resolvedSections.entries()]
+          .filter(([key]) => section.dependencies?.includes(key))
+      )
+    };
+    
+    await Bun.write(
+      join(this.debugDir, `${section.title.toLowerCase()}-input.json`),
+      JSON.stringify(debugInput, null, 2)
+    );
+    
+    // Write content
+    await Bun.write(
+      join(this.outputDir, `${section.title.toLowerCase()}.md`),
+      section.content
+    );
   }
 }
 
